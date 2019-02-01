@@ -139,12 +139,32 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
-    for k in range(1, n):
 
-        if fibonacci(k+1) >= n:
-            return fibonacci(k)
-    else:
-        return 1
+
+    alist = [0, 1]
+    k = 0
+    while True:
+        alist = alist + [alist[k] + alist[k+1]]
+        #print(alist)
+        if alist[k] >= n:
+            return alist[k-1]
+        k = k + 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
